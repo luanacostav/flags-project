@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: rgba(49, 148, 159, 0.66);
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.div-flags {
+    background: rgba(49, 148, 159, 0.66);
+    width: 55%;
+    overflow: hidden;
+    overflow: scroll;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+.div-flags img {
+    width: 300px;
+    margin-top: 20px;
+}
+
+.div-flags img:hover {
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+
+.div-info {
+    background: rgba(33, 101, 108, 0.66);
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-info {
+    text-align: center;
+    color: white;
+    font-size: 80px;
+}
+
+.div-info-flag {
+    width: 450px;
+    height: 270px;
+    background: rgba(255, 255, 255, 0.847);
+    color: rgba(33, 101, 108, 0.873);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.div-info-flag p {
+    margin: 20px;
+}
+
+.name-flag {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.climate-flag::before {
+    content: '↪ ';
+}
+.area-flag::before {
+    content: '↪ Km²: ';
+}
+
+.hab-flag::before {
+    content: '↪ Habitantes: ';
+}
