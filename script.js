@@ -6,25 +6,6 @@ async function loadData() {
     return data.estados
 }
 
-async function showFlags() {
-    const flags = document.querySelector('#flags')
-
-    const dataFlag = await loadData()
-
-    dataFlag.map((flag) => {
-        const divFlags = document.createElement('div')
-        flags.appendChild(divFlags)
-
-        const imgFlag = document.createElement('img')
-        imgFlag.src = flag.bandeira_url
-
-        const name_flag = flag.nome
-
-        imgFlag.addEventListener("click", () => showInfo(name_flag))
-        divFlags.appendChild(imgFlag)
-    })
-}
-
 async function showInfo(name_flag) {
     const info = document.querySelector('#info')
     info.innerHTML = ''
@@ -58,6 +39,25 @@ async function showInfo(name_flag) {
             divInfo.appendChild(area).classList.add('area-flag')
             divInfo.appendChild(hab).classList.add('hab-flag')
         }
+    })
+}
+
+async function showFlags() {
+    const flags = document.querySelector('#flags')
+
+    const dataFlag = await loadData()
+
+    dataFlag.map((flag) => {
+        const divFlags = document.createElement('div')
+        flags.appendChild(divFlags)
+
+        const imgFlag = document.createElement('img')
+        imgFlag.src = flag.bandeira_url
+
+        const name_flag = flag.nome
+
+        imgFlag.addEventListener("click", () => showInfo(name_flag))
+        divFlags.appendChild(imgFlag)
     })
 }
 
